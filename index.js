@@ -75,11 +75,14 @@ let menu = [
     days: "",
   },
   {
-    dish: "",
-    price: "",
-    description: "",
-    image: "",
-    meat: "",
-    days: "",
+    dish: "Bubliki",
+    price: "1.99",
+    description:
+      "A ring of yeast-leavened wheat dough, that has been boiled in water for a short time before baking.",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Bublik_in_Kiev_with_Sesame.JPG/123px-Bublik_in_Kiev_with_Sesame.JPG",
+    meat: ["No"],
+    days: ["Thursday", "Friday", "Sunday"],
   },
 ];
+// tailwind
