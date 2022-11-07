@@ -86,16 +86,25 @@ let menu = [
   },
 ];
 // tailwind
-document.getElementById("myImg").src = "moon.png";
-const day = document.getElementById("https://css.gg/json?=moon").src;
-const night = document.getElementById("https://css.gg/json?=sun").src;
+// const day = document.getElementById("https://css.gg/json?=moon").src;
+// const night = document.getElementById("https://css.gg/json?=sun").src;
 
 const tabs = {
   view: document.getElementById("view"),
+  bar: document.querySelector(".bar"),
+  background: document.body.style.background,
 };
 
 function start() {
-  tabs.view.src = day;
+  // tabs.view.src = day;
+  document.getElementById("view").style.backgroundImage = "url('moon.png')";
 }
 
-tabs.view.addEventListener("click", function () {});
+tabs.view.addEventListener("click", function () {
+  console.log(this.style.backgroundImage);
+  if (this.style.backgroundImage == 'url("sun.png")') {
+    this.style.backgroundImage = "url('moon.png')";
+  } else {
+    this.style.backgroundImage = "url('sun.png')";
+  }
+});
