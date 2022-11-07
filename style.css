@@ -1,0 +1,81 @@
+html,
+body,
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+body {
+    background-color:rgb(244, 151, 142);
+}
+
+@import url('https://css.gg/moon.css');
+
+
+.bar {
+    display: block;
+    margin-left: 1.5vw;
+    position: fixed;
+    width: 97vw;
+    height: 10rem;
+
+    background-color:rgb(255, 218, 185);
+    border-bottom: solid 0.25rem rgb(205, 180, 219);
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    
+}
+
+.tab {
+    display: inline-block;
+    height: inherit;
+    width: 24%;
+    border-right: solid 0.25rem rgb(205, 180, 219);
+    font-size: 5rem;
+    
+}
+
+.logo {
+    width: 30rem;
+    padding: 1rem;
+}
+
+.logoPic {
+    display: block;
+    margin: auto;
+    margin-top: auto;
+    width: 20rem;
+}
+
+.view {
+    height: 10rem;
+}
+
+.gg-moon,
+.gg-moon::after {
+    display: block;
+    box-sizing: border-box;
+    border-radius: 50%
+}
+
+.gg-moon {
+    overflow: hidden;
+    position: relative;
+    transform: rotate(-135deg) scale(var(--ggs,1));
+    width: 20px;
+    height: 20px;
+    border: 2px solid;
+    border-bottom-color: transparent
+}
+
+.gg-moon::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 18px;
+    border: 2px solid transparent;
+    box-shadow: 0 0 0 2px;
+    top: 8px;
+    left: 2px
+}

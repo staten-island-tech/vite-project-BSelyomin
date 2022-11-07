@@ -86,3 +86,16 @@ let menu = [
   },
 ];
 // tailwind
+document.getElementById("myImg").src = "moon.png";
+const day = document.getElementById("https://css.gg/json?=moon").src;
+const night = document.getElementById("https://css.gg/json?=sun").src;
+
+const tabs = {
+  view: document.getElementById("view"),
+};
+
+function start() {
+  tabs.view.src = day;
+}
+
+tabs.view.addEventListener("click", function () {});
