@@ -19,10 +19,10 @@ body,
 
 
 .bar {
-    display: block;
-    margin-left: 1.5vw;
+    display: flex;
+    margin-left: 7.5vw;
     position: fixed;
-    width: 97vw;
+    width: 85vw;
     height: 10rem;
     vertical-align: top;
     background-color:rgb(255, 218, 185);
@@ -54,7 +54,7 @@ body,
 
 .view {
     width: 10rem;
-    height:10rem;
+    height: 10rem;
     margin: auto;
     background-color: rgba(0,0,0,0);
     border-color: rgba(0,0,0,0);

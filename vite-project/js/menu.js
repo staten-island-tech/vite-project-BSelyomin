@@ -29,7 +29,7 @@ let menu = [
     days: ["Tuesday", "Wednesday", "Saturday"],
   },
   {
-    dish: "Cutlet with buckwheat",
+    dish: "Buckwheat",
     price: 1.99,
     description: "A side dish of buckwheat served with some butter.",
     image:
