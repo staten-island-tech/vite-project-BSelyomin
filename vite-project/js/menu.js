@@ -68,7 +68,7 @@ let menu = [
     dish: "Schi",
     price: 2.99,
     description:
-      "Fresh or fermented cabbage, with; potatoes, carrots, and onions.",
+      "Fresh or fermented cabbage, with potatoes, carrots, and onions.",
     image:
       "https://www.tripsavvy.com/thmb/YvS-R2iQauDfDoGE1e0efclFO8Q=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-556668045-5b953f7b46e0fb0050af9cce.jpg",
     meat: ["No"],
@@ -85,26 +85,5 @@ let menu = [
     days: ["Thursday", "Friday", "Sunday"],
   },
 ];
-// tailwind
-// const day = document.getElementById("https://css.gg/json?=moon").src;
-// const night = document.getElementById("https://css.gg/json?=sun").src;
 
-const tabs = {
-  view: document.getElementById("view"),
-  bar: document.querySelector(".bar"),
-  background: document.body.style.background,
-};
-
-function start() {
-  // tabs.view.src = day;
-  document.getElementById("view").style.backgroundImage = "url('moon.png')";
-}
-
-tabs.view.addEventListener("click", function () {
-  console.log(this.style.backgroundImage);
-  if (this.style.backgroundImage == 'url("sun.png")') {
-    this.style.backgroundImage = "url('moon.png')";
-  } else {
-    this.style.backgroundImage = "url('sun.png')";
-  }
-});
+export { menu };

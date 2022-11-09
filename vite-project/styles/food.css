@@ -1,0 +1,52 @@
+html,
+body,
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+:root {
+    --lightFood: 
+}
+
+.food {
+    width: 30vw;
+    font-size: 4rem;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 3rem;
+}
+
+.foodLight {
+    background-color: rgb(251, 196, 171);
+    box-shadow: 1.5rem 1.5rem rgb(189, 100, 100);
+}
+
+.foodDark {
+    background-color: rgb(41, 161, 182);
+    box-shadow: 1.5rem 1.5rem rgb(0, 55, 92);
+}
+
+.name {
+    font-size: 5rem;
+    font-weight:900;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.description {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.price {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.foodImg {
+    width:80%;
+    border-radius: 2rem;
+}
