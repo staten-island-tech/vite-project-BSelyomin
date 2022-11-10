@@ -20,9 +20,13 @@ body,
 
 .bar {
     display: flex;
-    margin-left: 7.5vw;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 500px;
+    margin: 0 auto;
     position: fixed;
-    width: 85vw;
+    width: 100rem;
     height: 10rem;
     vertical-align: top;
     background-color:rgb(255, 218, 185);
