@@ -9,25 +9,36 @@
   </head>
   <body class="light">
       <div class="bar" id="body">
-        <span class="tab logo">
+        <div class="tab logo">
             <img src="./images/logo-red.png" alt="Moi Blin" class="logoPic">
             
-        </span>
-        <span class="tab vegetarian selector">
-            <img src="./images/logo-red.png" alt="Moi Blin" class="logoPic">
-        </span>
-        <span class="tab meat selector">
-            <img src="./images/logo-red.png" alt="Moi Blin" class="logoPic">
-        </span>
-        <span class="tab selectMeats selector">
-            <img src="./images/logo-red.png" alt="Moi Blin" class="logoPic">
-        </span>
-        <span class="tab theme" >
+        </div>
+        <div class="tab full selector">
+          <button class="show showFull">Show Full Menu</button>
+        </div>
+        <div class="tab vegetarian selector">
+          <button class="show showVeg">Vegetarian Options</button>
+        </div>
+        <div class="tab meat selector">
+          <p class="meatTitle">Select A Meat</p>
+          <div class="meatSelector" tabindex="1"> 
+            <input class="selectopt" name="test" type="radio" id="opt1" checked value="all">
+            <label for="opt1" class="option">All</label>
+            <input class="selectopt" name="test" type="radio" id="opt2" value="beef">
+            <label for="opt2" class="option">Beef</label>
+            <input class="selectopt" name="test" type="radio" id="opt3" value="chicken">
+            <label for="opt3" class="option" >Chicken</label>
+            <input class="selectopt" name="test" type="radio" id="opt4" value="lamb">
+            <label for="opt4" class="option">Lamb</label>
+          </div>
+        </div>
+        <div class="tab theme" >
             <button id="view" class="view" ></button>
-        </span>
+        </div>
       </div>
     <div class="menu">
     </div>
+    <div class="fakespace"></div>
     <script type="module" src="./js/main.js">
     </script>
 </body>

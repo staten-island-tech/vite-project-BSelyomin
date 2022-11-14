@@ -1,0 +1,95 @@
+/* <><><><><><><><><><><><><> Logo <><><><><><><><><><><><><> */
+
+.logo {
+    width: 35rem;
+    padding: 1rem;
+}
+
+.logoPic {
+    display: block;
+    margin: auto;
+    margin-top: auto;
+    width: 20rem;
+}
+
+/* <><><><><><><><><><><><><> Dark/Light <><><><><><><><><><><><><> */
+
+.theme {
+    width: 10rem;
+    border: 0;
+    padding: 1px;
+}
+
+.view {
+    width: 7rem;
+    height: 7rem;
+    display: block;
+    margin: auto;
+    background-color: rgba(0,0,0,0);
+    border-color: rgba(0,0,0,0);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.view:hover {
+    scale: 1.1;
+}
+/* <><><><><><><><><><><><><> Filters <><><><><><><><><><><><><> */
+.vegetarian {
+    width: 35rem;
+}
+
+.show {
+  background-color: transparent;
+  border: 1px solid var(--border-colorX);
+  box-sizing: border-box;
+  color: #00132C;
+  font-family: "Avenir Next LT W01 Bold",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  padding: 16px 23px;
+  position: relative;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.show:hover,
+.show:active {
+  outline: 0;
+}
+
+.show:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.show:before {
+  background-color: var(--button-color1);
+  content: "";
+  height: calc(100% + 3px);
+  position: absolute;
+  right: -7px;
+  top: -9px;
+  transition: background-color 300ms ease-in;
+  width: 100%;
+  z-index: -1;
+}
+
+.show:hover:before {
+  background-color: var(--button-color2);
+  
+}
+
+
+.full {
+    width: 35rem;
+}
+
+.meat {
+    flex-direction: column;
+    column-count: 1;
+    width: 35rem;
+}

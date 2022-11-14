@@ -1,5 +1,32 @@
-@import url('selectors.css');
+@import url('meatSelector.css');
 @import url('food.css');
+@import url('tabs.css');
+
+:root {
+    /* Colors Warm*/
+    --darker-red: rgb(109, 6, 0); 
+    --red: rgb(199, 12, 0);
+    --light-red: rgb(255,100,100);
+    --orange-red: rgb(255, 34, 0);
+    --beige: rgb(255, 218, 185);
+    --grey: rgb(205, 180, 219);
+    --black: black;
+
+    /* Colors Cool */
+    --darker-blue: rgb(0,33,55);
+    --dark-blue: rgb(11,47,53);
+    --blue: rgb(36,149,168);
+    --light-blue: rgb(53,217,245);
+    --white: rgb(240,240,240);
+
+
+    --meat-hover: var(--darker-red); 
+    --meat-bg: var(--red);
+    --border-color: var(--grey);
+    --button-color1: var(--light-red);
+    --button-color2: var(--orange-red);
+    --border-colorX: var(--black);
+}
 
 html,
 body,
@@ -8,6 +35,10 @@ body,
     margin: 0;
     box-sizing: border-box;
     font-size: 62.5%;
+    color: black;
+}
+
+body {
 }
 .light {
     background-color:rgb(244, 151, 142);
@@ -21,16 +52,13 @@ body,
 .bar {
     display: flex;
     top: 0;
-    left: 0;
-    right: 0;
-    width: 500px;
     margin: 0 auto;
     position: fixed;
-    width: 100rem;
+    width: 150rem;
     height: 10rem;
     vertical-align: top;
-    background-color:rgb(255, 218, 185);
-    border-bottom: solid 0.25rem rgb(205, 180, 219);
+    background-color: var(--beige);
+    border-bottom: solid .5rem var(--border-color);
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
     vertical-align: top;
@@ -39,37 +67,27 @@ body,
 .tab {
     display: inline-block;
     height: inherit;
-    border-right: solid 0.25rem rgb(205, 180, 219);
+    border-right: solid .5rem var(--border-color);
     font-size: 5rem;
     margin-top: 0rem;
-}
-
-.logo {
-    width: 40rem;
-    padding: 1rem;
-}
-
-.logoPic {
-    display: block;
-    margin: auto;
-    margin-top: auto;
-    width: 20rem;
-}
-
-.view {
-    width: 10rem;
-    height: 10rem;
-    margin: auto;
-    background-color: rgba(0,0,0,0);
-    border-color: rgba(0,0,0,0);
+    display: flex;
+    align-items: center;
+    justify-content: center;     
 }
 
 .menu {
-    padding-top: 15rem;
+    padding: 15rem 0 10rem 0;
+    display: block;
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
     flex-wrap: wrap;
     row-gap: 5rem;
-    margin-bottom: 10rem;
+    width: 100vw;
+    vertical-align: top;
+}
+
+
+.theme {
+    border: 0;
 }

@@ -7,12 +7,10 @@ body,
     font-size: 62.5%;
 }
 
-:root {
-    --lightFood: 
-}
 
 .food {
     width: 30vw;
+    height: 35vw;
     font-size: 4rem;
     text-align: center;
     padding: 2rem;
