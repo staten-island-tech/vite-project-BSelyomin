@@ -26,6 +26,7 @@
     --button-color1: var(--light-red);
     --button-color2: var(--orange-red);
     --border-colorX: var(--black);
+    --bar-bg: var(--beige);
 }
 
 html,
@@ -42,10 +43,24 @@ body {
 }
 .light {
     background-color:rgb(244, 151, 142);
+    --meat-hover: var(--darker-red); 
+    --meat-bg: var(--red);
+    --border-color: var(--grey);
+    --button-color1: var(--light-red);
+    --button-color2: var(--orange-red);
+    --border-colorX: var(--black);
+    --bar-bg: var(--beige);
 }
 
 .dark {
     background-color:rgb(0, 21, 35);
+    --meat-hover: var(--blue); 
+    --meat-bg: var(--dark-blue);
+    --border-color: var(--black);
+    --button-color1: var(--blue);
+    --button-color2: var(--light-blue);
+    --border-colorX: var(--white);
+    --bar-bg: var(--darker-blue);
 }
 
 
@@ -57,7 +72,7 @@ body {
     width: 150rem;
     height: 10rem;
     vertical-align: top;
-    background-color: var(--beige);
+    background-color: var(--bar-bg);
     border-bottom: solid .5rem var(--border-color);
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;

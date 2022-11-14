@@ -29,34 +29,14 @@ window.view.addEventListener("click", function () {
     window.logoPic.src = "../images/logo-blue.png";
 
     document.body.classList = "dark";
-    window.bar.style.backgroundColor = "var(--darker-blue)";
-    window.root.style.setProperty("--border-color", "var(--black)");
-
     theme = "foodDark";
-
-    window.meatTitle.style.color = "white";
-    window.root.style.setProperty("--meat-hover", "var(--blue)");
-    window.root.style.setProperty("--meat-bg", "var(--dark-blue)");
-    window.root.style.setProperty("--button-color1", "var(--blue)");
-    window.root.style.setProperty("--button-color2", "var(--light-blue)");
-    window.root.style.setProperty("--border-colorX", "var(--white)");
     createMenu();
   } else {
     this.style.backgroundImage = 'url("../images/sun.png")';
     window.logoPic.src = "../images/logo-red.png";
 
     document.body.classList = ["light"];
-    window.bar.style.backgroundColor = "var(--beige)";
-    window.root.style.setProperty("--border-color", "var(--grey)");
-
     theme = "foodLight";
-
-    window.meatTitle.style.color = "black";
-    window.root.style.setProperty("--meat-hover", "var(--red)");
-    window.root.style.setProperty("--meat-bg", "var(--red)");
-    window.root.style.setProperty("--button-color1", "var(--light-red)");
-    window.root.style.setProperty("--button-color2", "");
-    window.root.style.setProperty("--border-colorX", "black");
     createMenu();
   }
 });
@@ -100,14 +80,14 @@ function sortMenu(meatType) {
   let sortedMenu = menu.filter((meat) => meat.meat.includes(meatType));
 
   window.menu.replaceChildren();
-  sortedMenu.forEach((item) => {
+  sortedMenu.forEach((food) => {
     window.menu.insertAdjacentHTML(
       "afterbegin",
       `<div class="food ${theme}">
-          <p1 class="name">${item.dish}</p1>
-          <p2 class="description">${item.description}</p2>
-          <p3 class="price">$${item.price}</p3>
-          <img src="${item.image}" class="foodImg">`
+          <p1 class="name">${food.dish}</p1>
+          <p2 class="description">${food.description}</p2>
+          <p3 class="price">$${food.price}</p3>
+          <img src="${food.image}" class="foodImg">`
     );
   });
 }

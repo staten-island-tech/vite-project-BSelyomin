@@ -39,7 +39,7 @@ let menu = [
   },
   {
     dish: "Cutlet with Buckwheat",
-    price: 2.14,
+    price: 4.14,
     description: "A classic russian cutlet with buckwheat.",
     image: "https://i.ytimg.com/vi/97rL-AY5vqA/maxresdefault.jpg",
     meat: ["chicken", "beef"],
