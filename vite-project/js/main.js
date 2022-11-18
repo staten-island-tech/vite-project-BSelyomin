@@ -4,9 +4,9 @@ import "aos/dist/aos.css"; // You can also use <link> for styles
 // ..
 AOS.init();
 
-let theme = "foodLight";
-let dayToday = 0;
-let dailyMenu = 0;
+let theme = "foodLight",
+  dayToday = 0,
+  dailyMenu = 0;
 
 const window = {
   view: document.getElementById("view"),
@@ -61,6 +61,52 @@ window.meatOption.forEach((input) =>
   })
 );
 
+window.showFull.addEventListener("click", function () {
+  deals("buttonPress");
+});
+
+setInterval(update, 10000);
+
+function update() {
+  console.log("running");
+  let date = new Date();
+  if (dayToday != date.getDay()) {
+    dayToday = date.getDay();
+    dailyMenu = menu.filter((item) => item.days.includes(dayToday));
+    createDayMenu();
+  }
+}
+function deals(change) {
+  if (change == "buttonPress") {
+    if (window.showFull.innerHTML == "Show Full Menu") {
+      window.showFull.innerHTML = "Show Daily Deals";
+      createMenu();
+    } else {
+      window.showFull.innerHTML = "Show Full Menu";
+      createDayMenu();
+    }
+  } else {
+    createDayMenu();
+  }
+}
+
+function createDayMenu() {
+  console.log(1);
+
+  window.menu.replaceChildren();
+  dailyMenu.forEach((item) => {
+    window.menu.insertAdjacentHTML(
+      "afterbegin",
+      `<div class="food ${theme}">
+        <p1 class="name">${item.dish}</p1>
+        <p2 class="description">${item.description}</p2>
+        <strike>$${item.price}</strike>
+        <p3 class="price">$ ${item.price / 2}</p3>
+        <img src="${item.image}" class="foodImg">`
+    );
+  });
+}
+
 function createMenu() {
   window.menu.replaceChildren();
 
@@ -84,68 +130,10 @@ function sortMenu(meatType) {
     window.menu.insertAdjacentHTML(
       "afterbegin",
       `<div class="food ${theme}">
-          <p1 class="name">${food.dish}</p1>
-          <p2 class="description">${food.description}</p2>
-          <p3 class="price">$${food.price}</p3>
-          <img src="${food.image}" class="foodImg">`
-    );
-  });
-}
-
-window.showFull.addEventListener("click", function () {
-  deals("buttonPress");
-});
-
-setInterval(update, 10000);
-
-function update() {
-  console.log("running");
-  let date = new Date();
-  if (dayToday != date.getDay()) {
-    dayToday = date.getDay();
-    dailyMenu = menu.filter((item) => item.days.includes(dayToday));
-    console.log(freeProduct(dailyMenu));
-    let sale = dailyMenu.map((item) => item.price / 2);
-    for (let i = 0; i < dailyMenu.length; i++) {
-      dailyMenu[i].price = sale[i];
-    }
-    createDayMenu();
-  }
-}
-
-const freeProduct = function (products) {
-  return products.map((item) => {
-    return Object.assign(item.price / 2);
-  });
-};
-
-function deals(change) {
-  if (change == "buttonPress") {
-    if (window.showFull.innerHTML == "Show Full Menu") {
-      window.showFull.innerHTML = "Show Daily Deals";
-      createMenu();
-    } else {
-      window.showFull.innerHTML = "Show Full Menu";
-      createDayMenu();
-    }
-  } else {
-    createDayMenu();
-  }
-}
-
-function createDayMenu() {
-  console.log(1);
-
-  window.menu.replaceChildren();
-  dailyMenu.forEach((item) => {
-    window.menu.insertAdjacentHTML(
-      "afterbegin",
-      `<div class="food ${theme}">
-          <p1 class="name">${item.dish}</p1>
-          <p2 class="description">${item.description}</p2>
-          <strike>$${item.price * 2}</strike>
-          <p3 class="price">$ ${item.price}</p3>
-          <img src="${item.image}" class="foodImg">`
+        <p1 class="name">${food.dish}</p1>
+        <p2 class="description">${food.description}</p2>
+        <p3 class="price">$${food.price}</p3>
+        <img src="${food.image}" class="foodImg">`
     );
   });
 }
