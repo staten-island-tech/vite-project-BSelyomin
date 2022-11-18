@@ -1,4 +1,4 @@
-let menu = [
+const menu = [
   {
     dish: "Shashlik",
     price: 13.66,

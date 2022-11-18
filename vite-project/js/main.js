@@ -104,6 +104,7 @@ function update() {
   if (dayToday != date.getDay()) {
     dayToday = date.getDay();
     dailyMenu = menu.filter((item) => item.days.includes(dayToday));
+    console.log(freeProduct(dailyMenu));
     let sale = dailyMenu.map((item) => item.price / 2);
     for (let i = 0; i < dailyMenu.length; i++) {
       dailyMenu[i].price = sale[i];
@@ -111,6 +112,12 @@ function update() {
     createDayMenu();
   }
 }
+
+const freeProduct = function (products) {
+  return products.map((item) => {
+    return Object.assign(item.price / 2);
+  });
+};
 
 function deals(change) {
   if (change == "buttonPress") {
@@ -129,7 +136,6 @@ function deals(change) {
 function createDayMenu() {
   console.log(1);
 
-  console.log(dailyMenu);
   window.menu.replaceChildren();
   dailyMenu.forEach((item) => {
     window.menu.insertAdjacentHTML(
